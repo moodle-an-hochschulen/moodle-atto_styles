@@ -22,30 +22,31 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['config'] = 'Styles Config';
-$string['config_desc'] = 'Custom styles configuration in JSON format, for example:<br />
+$string['config'] = 'Styles configuration';
+$string['config_desc'] = 'Configuration for the styles widget for Atto in JSON format.
+        <hr />
+        For example:<br />
         {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"title": "Blue Box",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"title": "Blue box",<br />
         &nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
         &nbsp;&nbsp;&nbsp;&nbsp;"classes": "box blue"<br />
         },{<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"title": "Red Box",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"title": "Red text",<br />
         &nbsp;&nbsp;&nbsp;&nbsp;"type": "inline",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"classes": "box red"<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;"classes": "red"<br />
         }<br />
-        <br />
-        The config titles can also support the multilang filter is enabled, but additonal double-quotes will need to be escaped<br />
-        {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"title": "&lt;span class=\\"multilang\\" lang=\\"en\\"&gt;Blue Box&lt;/span&gt;&lt;span class=\\"multilang\\" lang=\\"de\\"&gt;Blau Box&lt;/span&gt;",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;"classes": "bluebox"<br />
-        }<br />
-        <br />
-        Multiple classes can be defined for each item, separated by a space<br/ >
-        <br />
-        There are 2 options for the "type" setting: "block" or "inline"<br />
-        "block" will create a &lt;div&gt; tag with the appropriate classes and will act as a standard block level element. This will take over the current block level element and may apply to more than just the currently selected text<br />
-        "inline" will create a &lt;span&gt; tag with the give classes and will act as a standard inline element. This will only apply to the currently selected text';
-$string['nostyle'] = 'No Style';
+        <hr />
+        <ul>
+        <li>The <em>title</em> attribute defines the name for style within the Atto styles widget.<br />
+        A title can also support the Moodle multilang filter (if enabled), but additonal double-quotes will need to be escaped.<br />
+        For example:<br />
+        "title": "&lt;span class=\\"multilang\\" lang=\\"en\\"&gt;Blue box&lt;/span&gt;&lt;span class=\\"multilang\\" lang=\\"de\\"&gt;Blaue Box&lt;/span&gt;"</li>
+        <li>The <em>type</em> attribute can contain one of two values: "block" or "inline".<br />
+        "block" will create a &lt;div&gt; tag with the given class(es) and will act as a standard block level element. This will take over the current block level element and may apply to more than just the currently selected text.<br />
+        "inline" will create a &lt;span&gt; tag with the given class(es) and will act as a standard inline element. This will only apply to the currently selected text.</li>
+        <li>The <em>classes</em> attribute takes the CSS class name which will be applied to the block / inline text.<br />
+        Multiple classes can be defined for each item, separated by a space. They will all be applied to the block / inline text.</li>
+        </ul>';
+$string['nostyle'] = 'No style';
 $string['pluginname'] = 'Styles';
-$string['settings'] = 'Styles Settings';
+$string['settings'] = 'Styles settings';
