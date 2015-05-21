@@ -1,0 +1,25 @@
+.editor_atto_menu .atto_styles_button .dropdown-menu>li>a {
+    margin-left: 22px;
+    padding-left: 2px;
+}
+
+.editor_atto_menu .atto_styles_button .dropdown-menu>li>a i {
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 15px;
+    height: 15px;
+    margin: 2px 0 0 -21px;
+    display: block;
+    float: left;
+}
+.editor_atto_menu .atto_styles_button .dropdown-menu>li>a i.inline_element {
+    background-image: url([[pix:atto_styles|inline]]);
+}
+.editor_atto_menu .atto_styles_button .dropdown-menu>li>a i.block_element {
+    background-image: url([[pix:atto_styles|block]]);
+}
+
+.editor_atto_menu .disableinline .inlinestyle {
+    color: #ccc;
+    cursor: default;
+}
