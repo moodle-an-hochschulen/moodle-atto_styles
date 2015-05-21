@@ -15,10 +15,13 @@ YUI.add('moodle-atto_styles-button', function (Y, NAME) {
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/*
- * @package    atto_styles
- * @copyright  2013 Damyon Wiese  <damyon@moodle.com>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+/**
+ * Atto styles - YUI file
+ *
+ * @package     atto
+ * @subpackage  atto_styles
+ * @copyright   2015 Alexander Bias, University of Ulm <alexander.bias@uni-ulm.de>, together with Synergy Learning UK
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 /**
@@ -26,7 +29,7 @@ YUI.add('moodle-atto_styles-button', function (Y, NAME) {
  */
 
 /**
- * Atto text editor title plugin.
+ * Atto text editor styles plugin.
  *
  * @namespace M.atto_styles
  * @class button
@@ -84,7 +87,7 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
     },
 
     /**
-     * Change the title to the specified style.
+     * Change the text to the specified style.
      *
      * @method _changeStyle
      * @param {EventFacade} e

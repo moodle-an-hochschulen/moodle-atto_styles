@@ -15,15 +15,18 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Atto text editor integration version file.
+ * Atto styles - Version file
  *
- * @package    atto_styles
- * @copyright  2013 Damyon Wiese  <damyon@moodle.com>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     atto
+ * @subpackage  atto_styles
+ * @copyright   2015 Alexander Bias, University of Ulm <alexander.bias@uni-ulm.de>, together with Synergy Learning UK
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2015029300;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2014050800;        // Requires this Moodle version.
-$plugin->component = 'atto_styles';  // Full name of the plugin (used for diagnostics).
+$plugin->component = 'atto_styles';
+$plugin->version = 2014111000;
+$plugin->release = '2.8 (Build: 2015052100)';
+$plugin->requires = 2014111000;
+$plugin->maturity = MATURITY_STABLE;
