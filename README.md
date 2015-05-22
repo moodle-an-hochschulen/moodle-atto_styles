@@ -13,6 +13,7 @@ This plugin requires Moodle 2.8+
 Changes
 -------
 
+* 2015-05-22 - Include bootstrap classes into configuration example - Credits to David Mudrák
 * 2015-05-21 - Initial version
 
 

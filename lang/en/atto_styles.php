@@ -53,7 +53,34 @@ The <em>classes</em> attribute takes the CSS class name which will be applied to
 <br />
 Multiple classes can be defined for each item, separated by a space. They will all be applied to the block / inline text.<br />
 <br />
-The CSS class definitions can\'t be made within this plugin. You will have to add your CSS class definitions to your theme or Moodle additional HTML settings.';
+The CSS class definitions can\'t be made within this plugin. You will have to add your CSS class definitions to your theme or Moodle additional HTML settings.
+<hr />
+On Moodle installations with bootstrap-based themes (especially <em>More</em> and <em>Clean</em>, you can also create styles with bootstrap CSS classes instead of defining your own classes.
+<br /><br />
+For example:<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"title": "Hero unit box",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"classes": "hero-unit"<br />
+},{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"title": "Well",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"classes": "well"<br />
+},{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"title": "Info text",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"type": "inline",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"classes": "label label-info"<br />
+},{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"title": "Warning text",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"type": "inline",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"classes": "label label-warning"<br />
+}<br /><br />
+For more information about bootstrap classes, please visit the following links in the Bootstraß 2.3 documenation:
+<ul>
+<li><a href="http://getbootstrap.com/2.3.2/components.html#labels-badges">Bootstrap labels and badges</a></li>
+<li><a href="http://getbootstrap.com/2.3.2/components.html#alerts">Bootstrap alerts</a></li>
+<li><a href="http://getbootstrap.com/2.3.2/components.html#misc">Bootstrap helper classes</a></li>
+</ul>';
 $string['nostyle'] = 'No style';
 $string['pluginname'] = 'Styles';
 $string['settings'] = 'Styles settings';
