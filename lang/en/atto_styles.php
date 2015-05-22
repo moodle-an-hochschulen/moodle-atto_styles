@@ -45,9 +45,9 @@ For example:<br />
 <hr />
 The <em>type</em> attribute can contain one of two values: "block" or "inline".<br />
 <br />
-"block" will create a &lt;div&gt; tag with the given class(es) and will act as a standard block level element. This will take over the current block level element and may apply to more than just the currently selected text.<br />
+"block" will create a div tag with the given class(es) and will act as a standard block level element. This will take over the current block level element and may apply to more than just the currently selected text.<br />
 <br />
-"inline" will create a &lt;span&gt; tag with the given class(es) and will act as a standard inline element. This will only apply to the currently selected text.
+"inline" will create a span tag with the given class(es) and will act as a standard inline element. This will only apply to the currently selected text.
 <hr />
 The <em>classes</em> attribute takes the CSS class name which will be applied to the block / inline text.<br />
 <br />
