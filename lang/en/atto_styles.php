@@ -75,7 +75,7 @@ For example:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"type": "inline",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"classes": "label label-warning"<br />
 }<br /><br />
-For more information about bootstrap classes, please visit the following links in the Bootstraß 2.3 documenation:
+For more information about bootstrap classes, please visit the following links in the Bootstrap 2.3 documenation:
 <ul>
 <li><a href="http://getbootstrap.com/2.3.2/components.html#labels-badges">Bootstrap labels and badges</a></li>
 <li><a href="http://getbootstrap.com/2.3.2/components.html#alerts">Bootstrap alerts</a></li>
