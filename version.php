@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'atto_styles';
-$plugin->version = 2014111001;
+$plugin->version = 2014111002;
 $plugin->release = '2.8 (Build: 2015052200)';
 $plugin->requires = 2014111000;
 $plugin->maturity = MATURITY_STABLE;
