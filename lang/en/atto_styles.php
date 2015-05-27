@@ -39,9 +39,8 @@ For example:<br />
 <hr />
 The <em>title</em> attribute defines the name for style within the Atto styles widget.<br />
 <br />
-A title can also support the Moodle multilang filter (if enabled), but additonal double-quotes will need to be escaped.<br />
-For example:<br />
-"title": "&lt;span class=\\"multilang\\" lang=\\"en\\"&gt;Blue box&lt;/span&gt;&lt;span class=\\"multilang\\" lang=\\"de\\"&gt;Blaue Box&lt;/span&gt;"
+A title can also support the Moodle multilang filter (if enabled), but additonal double-quotes will need to be escaped with a backslash.<br />
+Please have a look at the plugin’s README file for an example.<br />
 <hr />
 The <em>type</em> attribute can contain one of two values: "block" or "inline".<br />
 <br />
