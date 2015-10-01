@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'atto_styles';
-$plugin->version = 2015051100;
-$plugin->release = '2.9 (Build: 2015081800)';
-$plugin->requires = 2015051100;
+$plugin->version = 2015111300;
+$plugin->release = '2.8 (Build: 2015111300)';
+$plugin->requires = 2014111000; // Moodle 2.8+
 $plugin->maturity = MATURITY_STABLE;

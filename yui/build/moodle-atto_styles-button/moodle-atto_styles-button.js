@@ -95,43 +95,138 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
      * @private
      */
     _changeStyle: function(e, style) {
-        var eID, element, p, pstyle;
+        var element, node, blockMethod;
+        blockMethod = this.get('blockmethod');
         if (style[0] === '<nostyle>') {
             element = window.getSelection().focusNode;
-            for (p = element; p; p = p.parentNode) {
-                if (p.nodeType !== 1) {
-                    continue;
-                }
-                pstyle = window.getComputedStyle(p, null);
-                if (pstyle) {
-                    p.removeAttribute('class');
-                    break;
+            if (blockMethod === 'replace') {
+                node = this._getParentBlockOld(element); // Find a styled element.
+            } else {
+                node = this._getParentBlock(element, true); // Find a block or list-item element.
+                if (blockMethod === 'adddiv') {
+                    node = this._getDiv(node);
                 }
             }
-            return;
+            if (node) {
+                node.removeAttribute('class');
+            }
         } else if (style[0] === '<block>') {
-            document.execCommand('formatBlock', false, '<div>');
-            element = window.getSelection().focusNode;
-            for (p = element; p; p = p.parentNode) {
-                if (p.nodeType !== 1) {
-                    continue;
-                }
-                pstyle = window.getComputedStyle(p, null);
-                if (pstyle) {
-                    var displaystyle = pstyle.getPropertyValue('display');
-                    if (displaystyle === 'block') {
-                        eID = p;
-                        break;
-                    }
-                }
+            if (blockMethod === 'replace') {
+                document.execCommand('formatBlock', false, '<div>');
             }
-            eID.setAttribute('class', style[1]);
+            element = window.getSelection().focusNode;
+            node = this._getParentBlock(element, (blockMethod !== 'replace'));
+            if (blockMethod === 'adddiv') {
+                node = this._addDivIfNeeded(node);
+            }
+            if (node) {
+                node.setAttribute('class', style[1]);
+            }
         } else {
             var styles = style[1].split(" ");
             this.get('host').toggleInlineSelectionClass(styles);
         }
         // Mark as updated
         this.markUpdated();
+    },
+
+    /**
+     * Find the nearest parent with display:block (or list-item)
+     * @param el Node
+     * @param includeListItem bool - true if list-item is a valid display type to return
+     * @returns Node|null
+     * @private
+     */
+    _getParentBlock: function(el, includeListItem) {
+        var p, node, display;
+        for (p = el; p; p = p.parentNode) {
+            if (p.nodeType !== 1) {
+                continue;
+            }
+            node = Y.one(p);
+            if (node.hasClass('editor_atto_content')) {
+                return null;
+            }
+            display = node.getComputedStyle('display');
+            if (display === 'block' || display === 'inline-block' || (includeListItem && display === 'list-item')) {
+                return node;
+            }
+        }
+    },
+
+    /**
+     * Find the nearest parent with any associated style.
+     * @param el Node
+     * @returns Node|null
+     * @private
+     */
+    _getParentBlockOld: function(el) {
+        var p, pstyle;
+        for (p = el; p; p = p.parentNode) {
+            if (p.nodeType !== 1) {
+                continue;
+            }
+            pstyle = window.getComputedStyle(p, null);
+            if (pstyle) {
+                return p;
+            }
+        }
+        return null;
+    },
+
+    /**
+     * Make sure we are targetting a div element - creating one if none is found.
+     * @param el Node
+     * @returns Node|null
+     * @private
+     */
+    _addDivIfNeeded: function(el) {
+        var parent, next, div;
+        if (!el) {
+            return null;
+        }
+        if (el.get('tagName').toLowerCase() === 'div') {
+            return el; // The block element is already a div - just return it.
+        }
+        parent = el.get('parentNode');
+        if (parent.get('tagName').toLowerCase() === 'div') {
+            if (parent.get('children').size() === 1) {
+                return parent; // The block element is surrounded by a div - return that.
+            }
+        }
+
+        // Need to wrap the existing element in a div.
+        next = el.next();
+        div = Y.Node.create('<div></div>');
+        div.appendChild(el);
+        if (next) {
+            parent.insertBefore(div, next);
+        } else {
+            parent.appendChild(div);
+        }
+        return div;
+    },
+
+    /**
+     * Look for a div that
+     * @param el Node
+     * @returns Node|null
+     * @private
+     */
+    _getDiv: function(el) {
+        var parent;
+        if (!el) {
+            return null;
+        }
+        if (el.get('tagName').toLowerCase() === 'div') {
+            return el; // The block element is already a div - just return it.
+        }
+        parent = el.get('parentNode');
+        if (parent.get('tagName').toLowerCase() === 'div') {
+            return parent; // The block is surrounded by a div - return it.
+        }
+
+        return null; // Not able to find a suitable div.
     },
 
     hasRangeSelected: function() {
@@ -154,6 +249,9 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
          */
         styles: {
             value: {}
+        },
+        blockmethod: {
+            value: 'setclass'
         }
     }
 });

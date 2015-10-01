@@ -55,5 +55,7 @@ function atto_styles_params_for_js($elementid, $options, $fpoptions) {
 
     $styles = json_encode($styles);
 
-    return array('styles' => $styles);
+    $blockmethod = get_config('atto_styles', 'blockmethod');
+
+    return array('styles' => $styles, 'blockmethod' => $blockmethod);
 }

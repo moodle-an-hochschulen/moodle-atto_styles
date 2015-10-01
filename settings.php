@@ -39,4 +39,14 @@ if ($ADMIN->fulltree) {
                                               $desc,
                                               $default);
     $settings->add($setting);
+    $blockmethods = array(
+        'replace' => get_string('method_replace', 'atto_styles'),
+        'setclass' => get_string('method_setclass', 'atto_styles'),
+        'adddiv' => get_string('method_adddiv', 'atto_styles'),
+    );
+    $setting = new admin_setting_configselect('atto_styles/blockmethod',
+                                              new lang_string('blockmethod', 'atto_styles'),
+                                              new lang_string('blockmethod_desc', 'atto_styles'),
+                                              'replace', $blockmethods);
+    $settings->add($setting);
 }

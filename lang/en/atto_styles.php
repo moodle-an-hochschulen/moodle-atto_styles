@@ -23,6 +23,13 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+$string['blockmethod'] = 'Block style method';
+$string['blockmethod_desc'] = 'The method used for adding block styles, each finds the block-level element that surrounds the selection and then:
+<ul>
+<li>Replace - convert the element into a \'div\' tag and apply the style</li>
+<li>Set class - applies the style directly to the element</li>
+<li>Surround - surround the element with a \'div\' tag and apply the style</li>
+</ul>';
 $string['config'] = 'Styles configuration';
 $string['config_desc'] = 'Configuration for the styles widget for Atto in JSON format.
 <hr />
@@ -80,6 +87,9 @@ For more information about bootstrap classes, please visit the following links i
 <li><a href="http://getbootstrap.com/2.3.2/components.html#alerts">Bootstrap alerts</a></li>
 <li><a href="http://getbootstrap.com/2.3.2/components.html#misc">Bootstrap helper classes</a></li>
 </ul>';
+$string['method_adddiv'] = 'Surround';
+$string['method_replace'] = 'Replace';
+$string['method_setclass'] = 'Set class';
 $string['nostyle'] = 'No style';
 $string['pluginname'] = 'Styles';
 $string['settings'] = 'Styles settings';
