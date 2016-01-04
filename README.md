@@ -7,12 +7,13 @@ Moodle Atto plugin which lets the administrator provide custom CSS classes which
 Requirements
 ------------
 
-This plugin requires Moodle 2.9+
+This plugin requires Moodle 3.0+
 
 
 Changes
 -------
 
+* 2016-01-01 - Check compatibility for Moodle 3.0, no functionality change
 * 2015-08-18 - Check compatibility for Moodle 2.9, no functionality change
 * 2015-05-22 - Include bootstrap classes into configuration example - Credits to David Mudrák
 * 2015-05-21 - Initial version
