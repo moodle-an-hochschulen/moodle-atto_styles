@@ -98,15 +98,16 @@ github with modifications.
 Copyright
 ---------
 
+Andrew Davidson
+Synergy Learning UK
+www.synergy-learning.com
+
+on behalf of
+
 University of Ulm
 kiz - Media Department
 Team Web & Teaching Support
 Alexander Bias
-
-together with
-
-Synergy Learning UK
-www.synergy-learning.com
 
 
 Credits

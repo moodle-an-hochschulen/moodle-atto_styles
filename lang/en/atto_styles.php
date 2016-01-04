@@ -19,7 +19,7 @@
  *
  * @package     atto
  * @subpackage  atto_styles
- * @copyright   2015 Alexander Bias, University of Ulm <alexander.bias@uni-ulm.de>, together with Synergy Learning UK
+ * @copyright   2015 Andrew Davidson, Synergy Learning UK <andrew.davidson@synergy-learning.com> on behalf of Alexander Bias, University of Ulm <alexander.bias@uni-ulm.de>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
