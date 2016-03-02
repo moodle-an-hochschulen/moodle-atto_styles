@@ -13,6 +13,7 @@ This plugin requires Moodle 3.0+
 Changes
 -------
 
+* 2016-02-10 - Change plugin version and release scheme to the scheme promoted by moodle.org, no functionality change
 * 2016-01-01 - Check compatibility for Moodle 3.0, no functionality change
 * 2015-08-18 - Check compatibility for Moodle 2.9, no functionality change
 * 2015-05-22 - Include bootstrap classes into configuration example - Credits to David Mudrák
