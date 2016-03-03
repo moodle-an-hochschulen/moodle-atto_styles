@@ -92,7 +92,7 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
      * @private
      */
     _changeStyle: function(e, style) {
-        var eID, element, p, pstyle;
+        var eID, element, p, pstyle, styles, host, i;
         if (style[0] === '<nostyle>') {
             element = window.getSelection().focusNode;
             for (p = element; p; p = p.parentNode) {
@@ -124,8 +124,11 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
             }
             eID.setAttribute('class', style[1]);
         } else {
-            var styles = style[1].split(" ");
-            this.get('host').toggleInlineSelectionClass(styles);
+            styles = style[1].split(" ");
+            host = this.get('host');
+            for (i = 0; i < styles.length; i += 1) {
+                host.toggleInlineSelectionClass([styles[i]]);
+            }
         }
         // Mark as updated
         this.markUpdated();
