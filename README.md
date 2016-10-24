@@ -109,7 +109,7 @@ www.synergy-learning.com
 
 on behalf of
 
-University of Ulm
+Ulm University
 kiz - Media Department
 Team Web & Teaching Support
 Alexander Bias
