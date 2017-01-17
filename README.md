@@ -33,7 +33,7 @@ The CSS class definitions which are applied to text within Atto can't be made wi
 
 atto_styles will have to know which CSS classes you want to provide in the Atto styles widget and how they should be called in the widget.
 
-Please visit Administration -> Site administration -> Plugins -> Text editors -> Atto HTML editor -> Styles settings.
+Please visit Site administration -> Plugins -> Text editors -> Atto HTML editor -> Styles settings.
 
 There, simply follow the instructions and configure the widget according to your needs.
 
@@ -41,7 +41,7 @@ There, simply follow the instructions and configure the widget according to your
 
 atto_styles has to be added to the Atto toolbar before it can be used by users.
 
-Please visit Administration -> Site administration -> Plugins -> Text editors -> Atto HTML editor -> Atto toolbar settings.
+Please visit Site administration -> Plugins -> Text editors -> Atto HTML editor -> Atto toolbar settings.
 
 There, please add the "styles" keyword to one of the lines in the "editor_atto | toolbar" setting according to your needs.
 
@@ -54,7 +54,9 @@ Multilangugae filter support
 Within the styles configuration, a title can support the Moodle multilang filter (if enabled), but additonal double-quotes will need to be escaped with a backslash.
 
 For example:
+```
 "title": <span class=\"multilang\" lang=\"en\">Blue box</span><span class=\"multilang\" lang=\"de\">Blaue Box</span>"
+```
 
 
 Themes
@@ -83,7 +85,7 @@ Right-to-left support
 ---------------------
 
 This plugin has not been tested with Moodle's support for right-to-left (RTL) languages.
-If you want to use this plugin with a RTL language and it doesn't work as-is, you are free to send me a pull request on
+If you want to use this plugin with a RTL language and it doesn't work as-is, you are free to send us a pull request on
 github with modifications.
 
 
