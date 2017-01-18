@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.2-r1
 
 * 2017-01-13 - Check compatibility for Moodle 3.2, no functionality change
 * 2017-01-12 - Move Changelog from README.md to CHANGES.md
