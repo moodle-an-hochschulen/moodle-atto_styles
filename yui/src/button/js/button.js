@@ -42,12 +42,16 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
         var items = [];
         var icon, span;
         Y.Array.each(styles, function(style) {
-            icon = '';
+            icon = '<i></i>';
             span = '<span>';
-            if (style.type === 'block') {
-                icon = '<i class="block_element"></i>';
-            } else if (style.type !== 'nostyle') {
-                icon = '<i class="inline_element"></i>';
+            if (style.type === 'nostyle') {
+                icon = '<i class="nostyleelement"></i>';
+                span = '<span class="nostyle">';
+            } else if (style.type === 'block') {
+                icon = '<i class="blockelement"></i>';
+                span = '<span class="blockstyle">';
+            } else if (style.type == 'inline') {
+                icon = '<i class="inlineelement"></i>';
                 span = '<span class="inlinestyle">';
             }
             items.push({

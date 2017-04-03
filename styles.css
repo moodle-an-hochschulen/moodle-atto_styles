@@ -1,27 +1,36 @@
-.editor_atto_menu .atto_styles_button .dropdown-menu > li > a {
-    margin-left: 22px;
-    padding-left: 2px;
+/* Prevent the menu from wrapping the menu items */
+.editor_atto_menu .atto_styles_button .dropdown-menu > li {
+    white-space: nowrap;
 }
 
+/* Position menu item icons */
 .editor_atto_menu .atto_styles_button .dropdown-menu > li > a i {
-    background-repeat: no-repeat;
-    background-position: left;
     width: 15px;
     height: 15px;
-    margin: 2px 0 0 -21px;
-    display: block;
-    float: left;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: sub;
+}
+.editor_atto_menu .atto_styles_button .dropdown-menu > li > a i.inlineelement:before {
+    content: url([[pix:atto_styles|inline]]);
+}
+.editor_atto_menu .atto_styles_button .dropdown-menu > li > a i.blockelement:before {
+    content: url([[pix:atto_styles|block]]);
 }
 
-.editor_atto_menu .atto_styles_button .dropdown-menu > li > a i.inline_element {
-    background-image: url([[pix:atto_styles|inline]]);
+/* Override Atto core paddings for menu items to prevent the disabled inline menu items from showing a hand cursor */
+/* Additionally remove text underline from menu items in this widget because Boost adds underlines to menu items by default
+   but for disabled menu items this is counterproductive */
+.editor_atto_menu .atto_styles_button .dropdown-menu > li > a {
+    padding: 0;
+    text-decoration: none;
+}
+.editor_atto_menu .atto_styles_button .dropdown-menu > li > a span {
+    padding: 3px 14px;
 }
 
-.editor_atto_menu .atto_styles_button .dropdown-menu > li > a i.block_element {
-    background-image: url([[pix:atto_styles|block]]);
-}
-
-.editor_atto_menu .disableinline .inlinestyle {
+/* Disabled inline style menu item visually */
+.editor_atto_menu .disableinline .atto_styles_button .inlinestyle {
     color: #ccc;
     cursor: default;
 }

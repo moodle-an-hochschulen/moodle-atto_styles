@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2017-04-03 - Bugfix: Fix menu item appearance on theme_boost
+
 ### v3.2-r1
 
 * 2017-01-13 - Check compatibility for Moodle 3.2, no functionality change
