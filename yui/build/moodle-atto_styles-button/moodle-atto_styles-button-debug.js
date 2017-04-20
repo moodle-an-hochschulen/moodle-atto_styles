@@ -19,7 +19,8 @@ YUI.add('moodle-atto_styles-button', function (Y, NAME) {
  * Atto styles - YUI file
  *
  * @package    atto_styles
- * @copyright  2015 Andrew Davidson, Synergy Learning UK <andrew.davidson@synergy-learning.com> on behalf of Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>
+ * @copyright  2015 Andrew Davidson, Synergy Learning UK <andrew.davidson@synergy-learning.com>
+ * on behalf of Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -124,6 +125,10 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
                     var displaystyle = pstyle.getPropertyValue('display');
                     if (displaystyle === 'block') {
                         eID = p;
+// SSU_AMEND START - ADD BR AFTER ATTO STYLES DIV
+                        var foo = window.getSelection().focusNode.parentNode;
+                        foo.insertAdjacentHTML('afterend', '<br>');
+// SSU_AMEND END
                         break;
                     }
                 }
