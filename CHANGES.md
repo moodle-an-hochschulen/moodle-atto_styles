@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.2-r3
 
 * 2017-05-05 - Improve README.md
 
