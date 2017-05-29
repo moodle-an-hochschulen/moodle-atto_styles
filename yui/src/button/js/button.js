@@ -17,7 +17,8 @@
  * Atto styles - YUI file
  *
  * @package    atto_styles
- * @copyright  2015 Andrew Davidson, Synergy Learning UK <andrew.davidson@synergy-learning.com> on behalf of Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>
+ * @copyright  2015 Andrew Davidson, Synergy Learning UK <andrew.davidson@synergy-learning.com>
+               on behalf of Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -32,6 +33,8 @@
  * @class button
  * @extends M.editor_atto.EditorPlugin
  */
+
+/*global rangy*/
 
 var component = 'atto_styles';
 
@@ -55,8 +58,8 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
                 span = '<span class="inlinestyle">';
             }
             items.push({
-                text: span+icon+style.title+'</span>',
-                callbackArgs: ['<'+style.type+'>', style.classes]
+                text: span + icon + style.title + '</span>',
+                callbackArgs: ['<' + style.type + '>', style.classes]
             });
         });
 
@@ -134,7 +137,7 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
                 host.toggleInlineSelectionClass([styles[i]]);
             }
         }
-        // Mark as updated
+        // Mark as updated.
         this.markUpdated();
     },
 
@@ -161,4 +164,3 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
         }
     }
 });
-
