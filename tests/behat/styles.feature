@@ -39,11 +39,12 @@ Feature: Atto styles
       accessibility = accessibilitychecker, accessibilityhelper
       other = html
       """
+    And I log out
 
   @javascript
   Scenario Outline: Test inline styles with one and two classes
-    Given I follow "Profile" in the user menu
-    And I follow "Edit profile"
+    Given I log in as "admin"
+    And I open my profile in edit mode
     And I set the field "Description" to <text>
     And I select the text in the "Description" Atto editor
     And I click on "Show more buttons" "button"
@@ -60,8 +61,8 @@ Feature: Atto styles
 
   @javascript
   Scenario Outline: Test block styles with one and two classes
-    Given I follow "Profile" in the user menu
-    And I follow "Edit profile"
+    Given I log in as "admin"
+    And I open my profile in edit mode
     And I set the field "Description" to <text>
     # No need to select the text in the Atto editor when testing block styles,
     # as they'll apply to everything if nothing is selected.
