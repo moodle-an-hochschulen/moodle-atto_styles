@@ -1,6 +1,8 @@
 moodle-atto_styles
 ==================
 
+[![Build Status](https://travis-ci.org/moodleuulm/moodle-atto_styles.svg?branch=master)](https://travis-ci.org/moodleuulm/moodle-atto_styles)
+
 Moodle Atto plugin which lets the administrator provide custom CSS classes which can afterwards be applied by users to block and inline text in Atto
 
 
