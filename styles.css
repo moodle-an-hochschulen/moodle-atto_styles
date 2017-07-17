@@ -5,11 +5,11 @@
 
 /* Position menu item icons */
 .editor_atto_menu .atto_styles_button .dropdown-menu > li > a i {
-    width: 15px;
+    display: inline-block;
     height: 15px;
     margin-right: 10px;
-    display: inline-block;
     vertical-align: sub;
+    width: 15px;
 }
 .editor_atto_menu .atto_styles_button .dropdown-menu > li > a i.inlineelement:before {
     content: url([[pix:atto_styles|inline]]);
