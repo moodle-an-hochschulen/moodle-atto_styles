@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2017-11-08 - Updated travis.yml to use newer node version for fixing TravisCI error.
+
 ### v3.2-r4
 
 * 2017-05-29 - Add Travis CI support
