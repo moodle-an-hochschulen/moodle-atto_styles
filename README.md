@@ -9,7 +9,7 @@ Moodle Atto plugin which lets the administrator provide custom CSS classes which
 Requirements
 ------------
 
-This plugin requires Moodle 3.2+
+This plugin requires Moodle 3.3+
 
 
 Motivation for this plugin
@@ -138,9 +138,8 @@ If you want to use this plugin with a RTL language and it doesn't work as-is, yo
 PHP7 Support
 ------------
 
-Since Moodle 3.0, Moodle core basically supports PHP7.
-Please note that PHP7 support is on our roadmap for this plugin, but it has not yet been thoroughly tested for PHP7 support and we are still running it in production on PHP5.
-If you encounter any success or failure with this plugin and PHP7, please let us know.
+Since Moodle 3.0, Moodle core basically supports PHP7. This plugin has been thoroughly tested for PHP7 support.
+If you encounter any success or failure with this plugin and the older PHP5 version, please let us know.
 
 
 Copyright

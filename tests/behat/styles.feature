@@ -58,7 +58,6 @@ Feature: Atto styles
       | "float"         | "Float Left"    | "<span class=\"pull-left\">float</span>"             |
       | "warning"       | "Warning text"  | "<span class=\"label label-warning\">warning</span>" |
 
-
   @javascript
   Scenario Outline: Test block styles with one and two classes
     Given I log in as "admin"
