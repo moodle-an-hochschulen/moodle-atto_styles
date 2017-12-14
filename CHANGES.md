@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2017-12-14 - Check compatibility for Moodle 3.4, no functionality change.
+
 ### v3.3-r1
 
 * 2017-12-04 - Check compatibility for Moodle 3.3, no functionality change.
