@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.4-r2
 
 * 2018-03-08 - Changed icon to use Font Awesome - Admins: please note that the ion representation changed.
 
