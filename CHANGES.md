@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2018-05-16 - Implement Privacy API.
+
 ### v3.4-r2
 
 * 2018-03-08 - Changed icon to use Font Awesome - Admins: please note that the ion representation changed.

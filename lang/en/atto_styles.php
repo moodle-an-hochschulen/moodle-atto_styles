@@ -83,4 +83,5 @@ or in the Bootstrap 4 documenation (for <em>Boost</em>):
 </ul>';
 $string['nostyle'] = 'No style';
 $string['pluginname'] = 'Styles';
+$string['privacy:metadata'] = 'The atto_styles plugin does not store any personal data.';
 $string['settings'] = 'Styles settings';
