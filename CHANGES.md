@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.4-r3
 
 * 2018-05-16 - Implement Privacy API.
 
