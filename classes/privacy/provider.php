@@ -15,18 +15,33 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Atto styles - Version file
+ * Atto styles - Privacy provider
  *
  * @package    atto_styles
- * @copyright  2015 Andrew Davidson, Synergy Learning UK <andrew.davidson@synergy-learning.com>
-               on behalf of Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>
+ * @copyright  2018 Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+namespace atto_styles\privacy;
+
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'atto_styles';
-$plugin->version = 2018051700;
-$plugin->release = 'v3.4-r3';
-$plugin->requires = 2017111300;
-$plugin->maturity = MATURITY_STABLE;
+/**
+ * Privacy Subsystem implementing null_provider.
+ *
+ * @package    atto_styles
+ * @copyright  2018 Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class provider implements \core_privacy\local\metadata\null_provider {
+
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return string
+     */
+    public static function get_reason() : string {
+        return 'privacy:metadata';
+    }
+}

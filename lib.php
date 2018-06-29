@@ -57,3 +57,12 @@ function atto_styles_params_for_js($elementid, $options, $fpoptions) {
 
     return array('styles' => $styles);
 }
+
+/**
+ * Get icon mapping for font-awesome.
+ */
+function atto_styles_get_fontawesome_icon_map() {
+    return [
+        'atto_styles:icon' => 'fa-tint'
+    ];
+}
