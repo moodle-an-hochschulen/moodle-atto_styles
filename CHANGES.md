@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.5-r1
 
 * 2018-09-26 - Check compatibility for Moodle 3.5, no functionality change.
 
