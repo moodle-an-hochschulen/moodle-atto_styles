@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2018-12-05 - Changed travis.yml due to upstream changes.
+
 ### v3.5-r1
 
 * 2018-09-26 - Check compatibility for Moodle 3.5, no functionality change.
