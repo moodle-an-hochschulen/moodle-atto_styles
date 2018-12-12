@@ -9,7 +9,7 @@ Moodle Atto plugin which lets the administrator provide custom CSS classes which
 Requirements
 ------------
 
-This plugin requires Moodle 3.4+
+This plugin requires Moodle 3.5+
 
 
 Motivation for this plugin
