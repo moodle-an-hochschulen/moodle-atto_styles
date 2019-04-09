@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-04-09 - Improvement: Make sure that the dropdown menu does not protrude from the editor.
 * 2018-12-05 - Changed travis.yml due to upstream changes.
 
 ### v3.5-r1

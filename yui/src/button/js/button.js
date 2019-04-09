@@ -63,7 +63,7 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
             });
         });
 
-        // Override the _showToolbarMenu function to disable/enable inline styles, as needed.
+        // Override the _showToolbarMenu function to disable/enable inline styles and to adjust the dropdown height, as needed.
         var showToolbarMenu = this._showToolbarMenu;
         this._showToolbarMenu = function(e, config) {
             showToolbarMenu.call(this, e, config);
@@ -77,6 +77,9 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
             } else {
                 menuContent.addClass('disableinline');
             }
+
+            this.toolbar.after('click', Y.bind(this._setDropdownHeight, this));
+            Y.on('windowresize', Y.bind(this._setDropdownHeight, this));
         };
 
         this.addToolbarMenu({
@@ -150,6 +153,11 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
         }
         range = selection.getRangeAt(0);
         return !range.collapsed;
+    },
+
+    _setDropdownHeight: function() {
+        var newHeight = parseInt(this.editor._node.clientHeight, 10) + 35;
+        Y.one('.editor_atto_menu .atto_styles_button .dropdown-menu').setStyle('max-height', newHeight);
     }
 }, {
     ATTRS: {

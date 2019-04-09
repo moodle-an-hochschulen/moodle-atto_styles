@@ -1,3 +1,9 @@
+/* Prevent the menu from protruding from the editor if really many styles are added to the menu. */
+.editor_atto_menu .atto_styles_button .dropdown-menu {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
 /* Prevent the menu from wrapping the menu items */
 .editor_atto_menu .atto_styles_button .dropdown-menu > li {
     white-space: nowrap;
