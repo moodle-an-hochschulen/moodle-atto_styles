@@ -14,14 +14,7 @@
     display: inline-block;
     height: 15px;
     margin-right: 10px;
-    vertical-align: sub;
     width: 15px;
-}
-.editor_atto_menu .atto_styles_button .dropdown-menu > li > a i.inlineelement:before {
-    content: url([[pix:atto_styles|inline]]);
-}
-.editor_atto_menu .atto_styles_button .dropdown-menu > li > a i.blockelement:before {
-    content: url([[pix:atto_styles|block]]);
 }
 
 /* Override Atto core paddings for menu items to prevent the disabled inline menu items from showing a hand cursor */

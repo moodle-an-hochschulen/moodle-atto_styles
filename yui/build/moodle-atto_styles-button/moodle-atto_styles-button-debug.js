@@ -51,13 +51,13 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
             span = '<span>';
             spanpreview = '<span class="title">';
             if (style.type === 'nostyle') {
-                icon = '<i class="nostyleelement"></i>';
+                icon = '<i class="fa fa-fw fa-times"></i>';
                 span = '<span class="nostyle">';
             } else if (style.type === 'block') {
-                icon = '<i class="blockelement"></i>';
+                icon = '<i class="fa fa-fw fa-tint"></i>';
                 span = '<span class="blockstyle">';
             } else if (style.type == 'inline') {
-                icon = '<i class="inlineelement"></i>';
+                icon = '<i class="fa fa-fw fa-i-cursor"></i>';
                 span = '<span class="inlinestyle">';
             }
             if (style.preview === true) {

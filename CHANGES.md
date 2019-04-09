@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-04-09 - Improvement: Change list item icons to FontAwesome.
 * 2019-04-09 - Improvement: Add preview to dropdown menu.
 * 2019-04-09 - Check compatibility for Moodle 3.6, no functionality change.
 
