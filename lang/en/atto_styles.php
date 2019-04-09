@@ -30,10 +30,12 @@ For example:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"title": "Blue box",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"classes": "box blue"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"preview": true<br />
 },{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"title": "Red text",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"type": "inline",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"classes": "red"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"preview": true<br />
 }<br />
 <hr />
 The <em>title</em> attribute defines the name for style within the Atto styles widget.<br />
@@ -52,6 +54,10 @@ The <em>classes</em> attribute takes the CSS class name which will be applied to
 Multiple classes can be defined for each item, separated by a space. They will all be applied to the block / inline text.<br />
 <br />
 The CSS class definitions can\'t be made within this plugin. You will have to add your CSS class definitions to your theme or Moodle additional HTML settings.
+<hr />
+The <em>preview</em> attribute takes the boolean values true or false (default). If this value is set to true, then the style item will get a real preview of the style. Otherwise, the style item will just show its title in plain text.<br />
+<br />
+Please note, if you choose to show the preview for a style item, this class has to defined in CSS in a way that it can be applied to span tags, even if the style item itself is a block level element.
 <hr />
 On Moodle installations with bootstrap-based themes (especially <em>Boost</em>, <em>More</em> and <em>Clean</em>, you can also create styles with bootstrap CSS classes instead of defining your own classes.
 <br /><br />

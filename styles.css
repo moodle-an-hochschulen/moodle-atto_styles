@@ -31,12 +31,22 @@
     padding: 0;
     text-decoration: none;
 }
-.editor_atto_menu .atto_styles_button .dropdown-menu > li > a span {
-    padding: 3px 14px;
+.editor_atto_menu .atto_styles_button .dropdown-menu > li > a span.preview,
+.editor_atto_menu .atto_styles_button .dropdown-menu > li > a span.title {
+    display: inline-block;
+    /* stylelint-disable-next-line declaration-no-important */
+    max-width: calc(100% - 55px) !important;
+    /* stylelint-disable-next-line declaration-no-important */
+    margin: 5px 0 !important;
 }
 
 /* Disabled inline style menu item visually */
 .editor_atto_menu .disableinline .atto_styles_button .inlinestyle {
-    color: #ccc;
     cursor: default;
+}
+.editor_atto_menu .disableinline .atto_styles_button .inlinestyle span.title {
+    color: #ccc;
+}
+.editor_atto_menu .disableinline .atto_styles_button .inlinestyle span.preview {
+    opacity: 0.5;
 }
