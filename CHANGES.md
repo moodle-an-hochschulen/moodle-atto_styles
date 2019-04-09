@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2019-04-09 - Check compatibility for Moodle 3.6, no functionality change.
+
 ### v3.5-r2
 
 * 2019-04-09 - Improvement: Make sure that the dropdown menu does not protrude from the editor.
