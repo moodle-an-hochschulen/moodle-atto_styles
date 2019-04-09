@@ -9,6 +9,20 @@
     white-space: nowrap;
 }
 
+/* Separate the style list menu items more clearly. */
+.editor_atto_menu .atto_styles_button .dropdown-menu > li {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* Separate the style list menu items more clearly. */
+.editor_atto_menu .atto_styles_button .dropdown-menu > li {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
 /* Position menu item icons */
 .editor_atto_menu .atto_styles_button .dropdown-menu > li > a i {
     display: inline-block;
@@ -30,16 +44,17 @@
     /* stylelint-disable-next-line declaration-no-important */
     max-width: calc(100% - 55px) !important;
     /* stylelint-disable-next-line declaration-no-important */
-    margin: 5px 0 !important;
+    margin: 0 !important;
 }
 
 /* Disabled inline style menu item visually */
 .editor_atto_menu .disableinline .atto_styles_button .inlinestyle {
     cursor: default;
 }
-.editor_atto_menu .disableinline .atto_styles_button .inlinestyle span.title {
-    color: #ccc;
+.editor_atto_menu .atto_styles_button .inlinehint {
+    display: none;
 }
-.editor_atto_menu .disableinline .atto_styles_button .inlinestyle span.preview {
-    opacity: 0.5;
+.editor_atto_menu .disableinline .atto_styles_button .inlinehint {
+    display: inline-block;
+    margin-left: 39px;
 }

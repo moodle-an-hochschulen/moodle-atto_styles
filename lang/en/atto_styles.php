@@ -87,6 +87,7 @@ or in the Bootstrap 4 documenation (for <em>Boost</em>):
 <li><a href="http://v4-alpha.getbootstrap.com/components/alerts/">Bootstrap alerts</a></li>
 <li><a href="http://v4-alpha.getbootstrap.com/utilities/">Bootstrap utilities</a></li>
 </ul>';
+$string['inlinehint'] = 'Select some text first to apply this style';
 $string['nostyle'] = 'No style';
 $string['pluginname'] = 'Styles';
 $string['privacy:metadata'] = 'The atto_styles plugin does not store any personal data.';

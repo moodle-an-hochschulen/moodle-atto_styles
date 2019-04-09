@@ -43,11 +43,12 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
         var styles = this.get('styles');
         styles = JSON.parse(styles);
         var items = [];
-        var icon, span, spanpreview;
+        var icon, span, spanpreview, inlinehint;
         Y.Array.each(styles, function(style) {
             icon = '<i></i>';
             span = '<span>';
             spanpreview = '<span class="title">';
+            inlinehint = '';
             if (style.type === 'nostyle') {
                 icon = '<i class="fa fa-fw fa-times"></i>';
                 span = '<span class="nostyle">';
@@ -57,12 +58,14 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
             } else if (style.type == 'inline') {
                 icon = '<i class="fa fa-fw fa-i-cursor"></i>';
                 span = '<span class="inlinestyle">';
+                inlinehint = '<br /><span class="inlinehint tag tag-info">' +
+                    M.util.get_string('inlinehint', 'atto_styles') + '</span>';
             }
             if (style.preview === true) {
                 spanpreview = '<span class="preview ' + style.classes + '">';
             }
             items.push({
-                text: span + icon + spanpreview + style.title + '</span></span>',
+                text: span + icon + spanpreview + style.title + '</span>' + inlinehint + '</span>',
                 callbackArgs: ['<' + style.type + '>', style.classes]
             });
         });
