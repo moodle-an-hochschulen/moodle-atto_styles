@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.6-r1
 
 * 2019-04-09 - Improvement: Add "Select some text first to apply this style" hint to inline elements.
 * 2019-04-09 - Improvement: Change list item icons to FontAwesome.
