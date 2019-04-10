@@ -69,7 +69,6 @@ function atto_styles_get_fontawesome_icon_map() {
 
 /**
  * Get the list of strings for this plugin.
- * @param string $elementid
  */
 function atto_styles_strings_for_js() {
     global $PAGE;
