@@ -34,7 +34,7 @@
  * @extends M.editor_atto.EditorPlugin
  */
 
-/*global rangy*/
+/* global rangy */
 
 var component = 'atto_styles';
 

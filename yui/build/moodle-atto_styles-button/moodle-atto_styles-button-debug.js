@@ -36,7 +36,7 @@ YUI.add('moodle-atto_styles-button', function (Y, NAME) {
  * @extends M.editor_atto.EditorPlugin
  */
 
-/*global rangy*/
+/* global rangy */
 
 var component = 'atto_styles';
 
