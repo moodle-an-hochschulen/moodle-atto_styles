@@ -60,7 +60,7 @@ The <em>preview</em> attribute takes the boolean values true or false (default).
 <br />
 Please note, if you choose to show the preview for a style item, this class has to defined in CSS in a way that it can be applied to span tags, even if the style item itself is a block level element.
 <hr />
-On Moodle installations with bootstrap-based themes (especially <em>Boost</em>, <em>More</em> and <em>Clean</em>, you can also create styles with bootstrap CSS classes instead of defining your own classes.
+On Moodle installations with bootstrap-based themes (especially <em>Boost</em>), you can also create styles with bootstrap CSS classes instead of defining your own classes.
 <br /><br />
 For example:<br />
 {<br />
@@ -76,17 +76,11 @@ For example:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"type": "inline",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"classes": "badge badge-warning"<br />
 }<br /><br />
-For more information about bootstrap classes, please visit the following links in the Bootstrap 2.3 documenation (for <em>Clean</em> and <em>More</em>):
+For more information about bootstrap classes, please visit the following links in the Bootstrap 4 documentation:
 <ul>
-<li><a href="http://getbootstrap.com/2.3.2/components.html#labels-badges">Bootstrap labels and badges</a></li>
-<li><a href="http://getbootstrap.com/2.3.2/components.html#alerts">Bootstrap alerts</a></li>
-<li><a href="http://getbootstrap.com/2.3.2/components.html#misc">Bootstrap helper classes</a></li>
-</ul>
-or in the Bootstrap 4 documenation (for <em>Boost</em>):
-<ul>
-<li><a href="http://v4-alpha.getbootstrap.com/components/badge/">Bootstrap badges</a></li>
-<li><a href="http://v4-alpha.getbootstrap.com/components/alerts/">Bootstrap alerts</a></li>
-<li><a href="http://v4-alpha.getbootstrap.com/utilities/">Bootstrap utilities</a></li>
+<li><a href="https://getbootstrap.com/docs/4.3/components/badge/">Bootstrap badges</a></li>
+<li><a href="https://getbootstrap.com/docs/4.3/components/alerts/">Bootstrap alerts</a></li>
+<li><a href="https://getbootstrap.com/docs/4.3/utilities/">Bootstrap utilities</a></li>
 </ul>';
 $string['inlinehint'] = 'Select some text first to apply this style';
 $string['nostyle'] = 'No style';
