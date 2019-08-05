@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2019-08-05 - Prepare compatibility for Moodle 3.7.
+
 ### v3.6-r1
 
 * 2019-04-09 - Improvement: Add "Select some text first to apply this style" hint to inline elements.
