@@ -57,7 +57,7 @@ There, please add the "styles" keyword to one of the lines in the "editor_atto |
 If you are using a default Atto toolbar, we propose to change "style1 = title, bold, italic" to "style1 = title, styles, bold, italic"
 
 
-Multilangugae filter support
+Multilanguage filter support
 ---------------------------
 
 Within the styles configuration, a title can support the Moodle multilang filter (if enabled), but additonal double-quotes will need to be escaped with a backslash.
