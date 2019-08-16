@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-08-16 - Enriched README.md with extensive examples.
 * 2019-08-05 - Renamed behat feature file.
 * 2019-08-05 - Updated Bootstrap info in README.md.
 * 2019-08-05 - Prepare compatibility for Moodle 3.7.

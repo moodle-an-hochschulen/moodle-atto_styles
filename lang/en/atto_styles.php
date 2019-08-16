@@ -23,25 +23,26 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['config'] = 'Styles configuration';
-$string['config_desc'] = 'Configuration for the styles widget for Atto in JSON format.
-<hr />
-For example:<br />
-{<br />
+$string['code_example'] = '{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"title": "Blue box",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"classes": "box blue"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"preview": true<br />
-},{<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"title": "Red text",<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"type": "inline",<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"classes": "red"<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"preview": true<br />
-}<br />
+}';
+$string['code_example_bootstrap'] = '{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"title": "Success alert",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"classes": "alert alert-success"<br />
+}';
+$string['config'] = 'Styles configuration';
+$string['config_desc'] = 'Configuration for the styles widget for Atto in JSON format. <br /> You can find an extensive example in the README.md in the section <a href="https://github.com/moodleuulm/moodle-atto_styles/blob/master/README.md#usage--settings">"Usage & Settings"</a>.
+<hr />
+For example:<br />
+{$a->code_example}
 <hr />
 The <em>title</em> attribute defines the name for style within the Atto styles widget.<br />
 <br />
-A title can also support the Moodle multilang filter (if enabled), but additonal double-quotes will need to be escaped with a backslash.<br />
+A title can also support the Moodle multilang filter (if enabled), but additional double-quotes will need to be escaped with a backslash.<br />
 Please have a look at the plugin’s README file for an example.<br />
 <hr />
 The <em>type</em> attribute can contain one of two values: "block" or "inline".<br />
@@ -63,19 +64,8 @@ Please note, if you choose to show the preview for a style item, this class has 
 On Moodle installations with bootstrap-based themes (especially <em>Boost</em>), you can also create styles with bootstrap CSS classes instead of defining your own classes.
 <br /><br />
 For example:<br />
-{<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"title": "Success alert",<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"classes": "alert alert-success"<br />
-},{<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"title": "Info badge",<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"type": "inline",<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"classes": "badge badge-info"<br />
-},{<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"title": "Warning badge",<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"type": "inline",<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"classes": "badge badge-warning"<br />
-}<br /><br />
+{$a->code_example_bootstrap}
+<br/><br/>
 For more information about bootstrap classes, please visit the following links in the Bootstrap 4 documentation:
 <ul>
 <li><a href="https://getbootstrap.com/docs/4.3/components/badge/">Bootstrap badges</a></li>

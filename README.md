@@ -38,6 +38,95 @@ To configure the plugin and its behaviour, you will have to do three configurati
 
 The CSS class definitions which are applied to text within Atto can't be made within this plugin. You will have to add your CSS class definitions to your theme (See https://docs.moodle.org/en/Theme_settings#Particular_theme_settings for details) or Moodle additional HTML settings (See https://docs.moodle.org/en/Header_and_footer for details).
 
+Here's a CSS example which might help you to build basic styles with this plugin:
+
+```
+.attostylesbox {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%
+}
+.attostylesbox.attostylesbox-solid {
+    color: white;
+}
+.attostylesbox.attostylesbox-outline {
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+}
+.attostylesbox.attostylesbox-callout {
+    background-color: white;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+}
+.attostylesbox.attostylesbox-solid-blue {
+    background-color: #7d9fd3;
+}
+.attostylesbox.attostylesbox-solid-green {
+    background-color: #98ca3e;
+}
+.attostylesbox.attostylesbox-solid-yellow {
+    background-color: #ffcf35;
+}
+.attostylesbox.attostylesbox-solid-red {
+    background-color: #ef4540;
+}
+.attostylesbox.attostylesbox-solid-black {
+    background-color: #3a3a3a;
+}
+.attostylesbox.attostylesbox-outline-blue {
+    border-color: #7d9fd3;
+    color: #7d9fd3;
+}
+.attostylesbox.attostylesbox-outline-green {
+    border-color: #98ca3e;
+    color: #98ca3e;
+}
+.attostylesbox.attostylesbox-outline-yellow {
+    border-color: #ffcf35;
+    color: #ffcf35;
+}
+.attostylesbox.attostylesbox-outline-red {
+    border-color: #ef4540;
+    color: #ef4540;
+}
+.attostylesbox.attostylesbox-outline-black {
+    border-color: #3a3a3a;
+    color: #3a3a3a;
+}
+.attostylesbox.attostylesbox-callout-blue {
+    border-left-color: #7d9fd3;
+}
+.attostylesbox.attostylesbox-callout-green {
+    border-left-color: #98ca3e;
+}
+.attostylesbox.attostylesbox-callout-yellow {
+    border-left-color: #ffcf35;
+}
+.attostylesbox.attostylesbox-callout-red {
+    border-left-color: #ef4540;
+}
+.attostylesbox.attostylesbox-callout-black {
+    border-left-color: #3a3a3a;
+}
+.attostylestextmarker {
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.attostylestextmarker.attostylestextmarker-green {
+    background: #99ffcc;
+}
+.attostylestextmarker.attostylestextmarker-pink {
+    background: #ffccff;
+}
+.attostylestextmarker.attostylestextmarker-yellow {
+    background: #ffffcc;
+}
+```
+
 ### 2. Configure styles widget
 
 atto_styles will have to know which CSS classes you want to provide in the Atto styles widget and how they should be called in the widget.
@@ -45,6 +134,120 @@ atto_styles will have to know which CSS classes you want to provide in the Atto 
 Please visit Site administration -> Plugins -> Text editors -> Atto HTML editor -> Styles settings.
 
 There, simply follow the instructions and configure the widget according to your needs.
+
+Here's the configuration which corresponds to the CSS example given above:
+
+```
+{
+    "title": "Red box (solid)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-solid attostylesbox-solid-red",
+    "preview": true
+},
+{
+    "title": "Red box (outline)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-outline attostylesbox-outline-red",
+    "preview": true
+},
+{
+    "title": "Red box (highlighted)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-callout attostylesbox-callout-red",
+    "preview": true
+},
+{
+    "title": "Green box (solid)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-solid attostylesbox-solid-green",
+    "preview": true
+},
+{
+    "title": "Green box (outline)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-outline attostylesbox-outline-green",
+    "preview": true
+},
+{
+    "title": "Green box (highlighted)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-callout attostylesbox-callout-green",
+    "preview": true
+},
+{
+    "title": "Yellow box (solid)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-solid attostylesbox-solid-yellow",
+    "preview": true
+},
+{
+    "title": "Yellow box (outline)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-outline attostylesbox-outline-yellow",
+    "preview": true
+},
+{
+    "title": "Yellow box (highlighted)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-callout attostylesbox-callout-yellow",
+    "preview": true
+},
+{
+    "title": "Blue box (solid)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-solid attostylesbox-solid-blue",
+    "preview": true
+},
+{
+    "title": "Blue box (outline)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-outline attostylesbox-outline-blue",
+    "preview": true
+},
+{
+    "title": "Blue box (highlighted)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-callout attostylesbox-callout-blue",
+    "preview": true
+},
+{
+    "title": "Black box (solid)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-solid attostylesbox-solid-black",
+    "preview": true
+},
+{
+    "title": "Black box (outline)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-outline attostylesbox-outline-black",
+    "preview": true
+},
+{
+    "title": "Black box (highlighted)",
+    "type": "block",
+    "classes": "attostylesbox attostylesbox-callout attostylesbox-callout-black",
+    "preview": true
+},
+{
+    "title": "Yellow text marker",
+    "type": "inline",
+    "classes": "attostylestextmarker attostylestextmarker-yellow",
+    "preview": true
+},
+{
+    "title": "Green text marker",
+    "type": "inline",
+    "classes": "attostylestextmarker attostylestextmarker-green",
+    "preview": true
+},
+{
+    "title": "Pink text marker",
+    "type": "inline",
+    "classes": "attostylestextmarker attostylestextmarker-pink",
+    "preview": true
+}
+```
+
 
 ### 3. Add styles widget to Atto toolbar
 
