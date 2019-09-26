@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.7-r2
 
 * 2019-09-26 - Make codechecker happy.
 
