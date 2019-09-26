@@ -34,8 +34,6 @@
  * @extends M.editor_atto.EditorPlugin
  */
 
-/* global rangy */
-
 var component = 'atto_styles';
 
 Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.EditorPlugin, [], {
@@ -154,7 +152,7 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
     hasRangeSelected: function() {
         var selection, range;
 
-        selection = rangy.getSelection();
+        selection = window.rangy.getSelection();
         if (!selection.rangeCount) {
             return false;
         }
