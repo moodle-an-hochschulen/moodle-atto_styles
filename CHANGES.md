@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.7-r1
 
 * 2019-08-16 - Enriched README.md with extensive examples.
 * 2019-08-05 - Renamed behat feature file.
