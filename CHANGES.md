@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2020-02-12 - Prepare compatibility for Moodle 3.8.
+
 ### v3.7-r2
 
 * 2019-09-26 - Make codechecker happy.
