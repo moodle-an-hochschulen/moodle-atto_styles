@@ -33,13 +33,11 @@ if ($ADMIN->fulltree) {
     $a = new stdClass();
     $a->code_example = new lang_string('code_example', 'atto_styles');
     $a->code_example_bootstrap = new lang_string('code_example_bootstrap', 'atto_styles');
+    $a->code_example_bootstrap_multiple = new lang_string('code_example_bootstrap_multiple', 'atto_styles');
     $name = new lang_string('config', 'atto_styles');
     $desc = new lang_string('config_desc', 'atto_styles', $a);
     $default = '';
 
-    $setting = new admin_setting_configtextarea('atto_styles/config',
-                                              $name,
-                                              $desc,
-                                              $default);
+    $setting = new \atto_styles\admin_setting_configtextarea_validatejson('atto_styles/config', $name, $desc, $default);
     $settings->add($setting);
 }

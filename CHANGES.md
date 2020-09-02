@@ -4,6 +4,13 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2020-10-06 - Fixed error in JSON example and improved setting with JSON validation.
+               PLEASE NOTE: Now, surrounding square brackets are mandatory when defining multiple styles.
+                            An upgrade script will handle existent settings. However, after updating the plugin
+                            please double check the setting.
+
 ### v3.8-r1
 
 * 2020-02-12 - Prepare compatibility for Moodle 3.8.

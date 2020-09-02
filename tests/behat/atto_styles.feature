@@ -6,7 +6,7 @@ Feature: Atto styles
     Given I log in as "admin"
     And the config value "config" of "atto_styles" is set as admin to multiline
       """
-      {
+      [{
           "title": "Hero unit box",
           "type": "block",
           "classes": "hero-unit"
@@ -22,7 +22,7 @@ Feature: Atto styles
           "title": "Warning text",
           "type": "inline",
           "classes": "label label-warning"
-      }
+      }]
       """
     And the config value "toolbar" of "editor_atto" is set as admin to multiline
       """
@@ -40,6 +40,51 @@ Feature: Atto styles
       other = html
       """
     And I log out
+
+    @javascript
+  Scenario: Test JSON validation of the setting
+    Given I log in as "admin"
+    And I navigate to "Plugins > Text editors > Atto HTML editor > Styles settings " in site administration
+    And I set the field "Styles configuration" to multiline:
+    """
+    Just a non JSON string.
+    """
+    And I press "Save changes"
+    Then I should see "Some settings were not changed due to an error."
+    And I should see "Entered JSON code is not valid."
+    When I set the field "Styles configuration" to multiline:
+    """
+     {
+          "title": "Hero unit box",
+          "type": "block",
+          "classes": "hero-unit"
+      }
+    """
+    And I press "Save changes"
+    Then I should not see "Some settings were not changed due to an error."
+    And I should not see "Entered JSON code is not valid."
+    When I set the field "Styles configuration" to multiline:
+    """
+     [{
+          "title": "Hero unit box",
+          "type": "block"
+          "classes": "hero-unit"
+      }]
+    """
+    And I press "Save changes"
+    Then I should see "Some settings were not changed due to an error."
+    And I should see "Entered JSON code is not valid."
+    When I set the field "Styles configuration" to multiline:
+     """
+     [{
+          "title": "Hero unit box",
+          "type": "block",
+          "classes": "hero-unit"
+      }]
+    """
+    And I press "Save changes"
+    Then I should not see "Some settings were not changed due to an error."
+    And I should not see "Entered JSON code is not valid."
 
   @javascript
   Scenario Outline: Test inline styles with one and two classes

@@ -37,9 +37,17 @@ function atto_styles_params_for_js($elementid, $options, $fpoptions) {
     // Format a string with the active filter set.
     // If it is modified - we assume that some sort of text filter is working in this context.
     $styles = get_config('atto_styles', 'config');
-    $styles = '['.$styles.']';
 
     $styles = json_decode($styles);
+
+    // If there is a single definition, no square brackets are needed for valid JSON.
+    // Nevertheless, we need a multidimensional array with the JSON object to proceed.
+    // So we create one here for this case.
+    if (!is_array($styles)) {
+        $new = array();
+        $new[] = $styles;
+        $styles = $new;
+    }
 
     foreach ($styles as $key => $style) {
         $styles[$key]->title = format_text($styles[$key]->title);

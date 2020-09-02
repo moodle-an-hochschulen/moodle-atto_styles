@@ -138,7 +138,7 @@ There, simply follow the instructions and configure the widget according to your
 Here's the configuration which corresponds to the CSS example given above:
 
 ```
-{
+[{
     "title": "Red box (solid)",
     "type": "block",
     "classes": "attostylesbox attostylesbox-solid attostylesbox-solid-red",
@@ -245,7 +245,7 @@ Here's the configuration which corresponds to the CSS example given above:
     "type": "inline",
     "classes": "attostylestextmarker attostylestextmarker-pink",
     "preview": true
-}
+}]
 ```
 
 

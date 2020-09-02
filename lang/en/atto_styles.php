@@ -26,7 +26,7 @@
 $string['code_example'] = '{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"title": "Blue box",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
-&nbsp;&nbsp;&nbsp;&nbsp;"classes": "box blue"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"classes": "box blue",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"preview": true<br />
 }';
 $string['code_example_bootstrap'] = '{<br />
@@ -34,6 +34,15 @@ $string['code_example_bootstrap'] = '{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"classes": "alert alert-success"<br />
 }';
+$string['code_example_bootstrap_multiple'] = '[{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"title": "Success alert",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"classes": "alert alert-success"<br />
+},{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"title": "Danger alert",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"type": "block",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"classes": "alert alert-danger"<br />
+}]';
 $string['config'] = 'Styles configuration';
 $string['config_desc'] = 'Configuration for the styles widget for Atto in JSON format. <br /> You can find an extensive example in the README.md in the section <a href="https://github.com/moodleuulm/moodle-atto_styles/blob/master/README.md#usage--settings">"Usage & Settings"</a>.
 <hr />
@@ -71,8 +80,14 @@ For more information about bootstrap classes, please visit the following links i
 <li><a href="https://getbootstrap.com/docs/4.3/components/badge/">Bootstrap badges</a></li>
 <li><a href="https://getbootstrap.com/docs/4.3/components/alerts/">Bootstrap alerts</a></li>
 <li><a href="https://getbootstrap.com/docs/4.3/utilities/">Bootstrap utilities</a></li>
-</ul>';
+</ul>
+<hr />
+Please note, that multiple definitions need to be surrounded by square brackets.
+<br /><br />
+For example:<br />
+{$a->code_example_bootstrap_multiple}';
 $string['inlinehint'] = 'Select some text first to apply this style';
+$string['jsondecodemessage'] = 'Entered JSON code is not valid.';
 $string['nostyle'] = 'No style';
 $string['pluginname'] = 'Styles';
 $string['privacy:metadata'] = 'The atto_styles plugin does not store any personal data.';
