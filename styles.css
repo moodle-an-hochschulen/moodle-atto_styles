@@ -16,11 +16,9 @@
     padding-top: 10px;
 }
 
-/* Separate the style list menu items more clearly. */
-.editor_atto_menu .atto_styles_button .dropdown-menu > li {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    padding-top: 10px;
+/* Do not add a bottom border to the last list element. */
+.editor_atto_menu .atto_styles_button .dropdown-menu > li:last-child {
+    border-bottom: none;
 }
 
 /* Position menu item icons */

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-10-08 - Removed bottom border from last element in list of styles.
 * 2020-10-06 - Fixed error in JSON example and improved setting with JSON validation.
                PLEASE NOTE: Now, surrounding square brackets are mandatory when defining multiple styles.
                             An upgrade script will handle existent settings. However, after updating the plugin
