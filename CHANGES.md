@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.8-r2
 
 * 2020-10-08 - Removed bottom border from last element in list of styles.
 * 2020-10-06 - Fixed error in JSON example and improved setting with JSON validation.
