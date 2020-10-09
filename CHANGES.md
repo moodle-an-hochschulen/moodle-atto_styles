@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2020-10-09 - Prepare compatibility for Moodle 3.9.
+
 ### v3.8-r2
 
 * 2020-10-08 - Removed bottom border from last element in list of styles.
