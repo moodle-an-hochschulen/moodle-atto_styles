@@ -41,7 +41,7 @@ Feature: Atto styles
       """
     And I log out
 
-    @javascript
+  @javascript
   Scenario: Test JSON validation of the setting
     Given I log in as "admin"
     And I navigate to "Plugins > Text editors > Atto HTML editor > Styles settings " in site administration
