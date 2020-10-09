@@ -49,6 +49,7 @@ function xmldb_atto_styles_upgrade($oldversion) {
                 "classes": "well text-muted"
             }
             and add surrounding square brackets around it to provide valid JSON code in the setting. */
+
         // First character (without leading whitespaces) in string should not be a '['.
         // Last character (without trailing whitespaces) in string should not be a ‘]‘.
         if (strpos($oldconfig, '},') !== false &&
