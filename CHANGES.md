@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-10-14 - Changed styles for focusing and hovering of dropdown list items.
 * 2020-10-09 - Prepare compatibility for Moodle 3.9.
 
 ### v3.8-r2

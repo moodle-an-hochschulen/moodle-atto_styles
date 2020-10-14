@@ -45,6 +45,15 @@
     margin: 0 !important;
 }
 
+/* Override Moodle core's styling, because the underline should not appear within the dropdown list. */
+.editor_atto_menu .atto_styles_button .dropdown-menu > li:focus,
+.editor_atto_menu .atto_styles_button .dropdown-menu > li:hover {
+    background-color: #f8f9fa;
+}
+.editor_atto_menu .atto_styles_button .dropdown-menu > li > a:focus {
+    box-shadow: none;
+}
+
 /* Disabled inline style menu item visually */
 .editor_atto_menu .disableinline .atto_styles_button .inlinestyle {
     cursor: default;
