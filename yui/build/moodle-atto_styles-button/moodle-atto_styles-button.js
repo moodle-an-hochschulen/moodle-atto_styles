@@ -36,6 +36,8 @@ YUI.add('moodle-atto_styles-button', function (Y, NAME) {
  * @extends M.editor_atto.EditorPlugin
  */
 
+/*global rangy*/
+
 var component = 'atto_styles';
 
 Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.EditorPlugin, [], {
@@ -43,29 +45,22 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
         var styles = this.get('styles');
         styles = JSON.parse(styles);
         var items = [];
-        var icon, span, spanpreview, inlinehint;
+        var icon, span;
         Y.Array.each(styles, function(style) {
             icon = '<i></i>';
             span = '<span>';
-            spanpreview = '<span class="title">';
-            inlinehint = '';
             if (style.type === 'nostyle') {
-                icon = '<i class="fa fa-fw fa-times"></i>';
+                icon = '<i class="nostyleelement"></i>';
                 span = '<span class="nostyle">';
             } else if (style.type === 'block') {
-                icon = '<i class="fa fa-fw fa-tint"></i>';
+                icon = '<i class="blockelement"></i>';
                 span = '<span class="blockstyle">';
             } else if (style.type == 'inline') {
-                icon = '<i class="fa fa-fw fa-i-cursor"></i>';
+                icon = '<i class="inlineelement"></i>';
                 span = '<span class="inlinestyle">';
-                inlinehint = '<br /><span class="inlinehint tag tag-info">' +
-                    M.util.get_string('inlinehint', 'atto_styles') + '</span>';
-            }
-            if (style.preview === true) {
-                spanpreview = '<span class="preview ' + style.classes + '">';
             }
             items.push({
-                text: span + icon + spanpreview + style.title + '</span>' + inlinehint + '</span>',
+                text: span + icon + style.title + '</span>',
                 callbackArgs: ['<' + style.type + '>', style.classes]
             });
         });
@@ -112,6 +107,9 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
         var eID, element, p, pstyle, styles, host, i;
         if (style[0] === '<nostyle>') {
             element = window.getSelection().focusNode;
+            if (!this.editor.contains(element)) {
+                return;
+            }
             for (p = element; p; p = p.parentNode) {
                 if (p.nodeType !== 1) {
                     continue;
@@ -126,6 +124,9 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
         } else if (style[0] === '<block>') {
             document.execCommand('formatBlock', false, '<div>');
             element = window.getSelection().focusNode;
+            if (!this.editor.contains(element)) {
+                return;
+            }
             for (p = element; p; p = p.parentNode) {
                 if (p.nodeType !== 1) {
                     continue;
@@ -154,7 +155,7 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
     hasRangeSelected: function() {
         var selection, range;
 
-        selection = window.rangy.getSelection();
+        selection = rangy.getSelection();
         if (!selection.rangeCount) {
             return false;
         }
