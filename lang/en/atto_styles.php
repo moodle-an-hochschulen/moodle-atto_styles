@@ -44,7 +44,7 @@ $string['code_example_bootstrap_multiple'] = '[{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"classes": "alert alert-danger"<br />
 }]';
 $string['config'] = 'Styles configuration';
-$string['config_desc'] = 'Configuration for the styles widget for Atto in JSON format. <br /> You can find an extensive example in the README.md in the section <a href="https://github.com/moodleuulm/moodle-atto_styles/blob/master/README.md#usage--settings">"Usage & Settings"</a>.
+$string['config_desc'] = 'Configuration for the styles widget for Atto in JSON format. <br /> You can find an extensive example in the README.md in the section <a href="https://github.com/moodle-an-hochschulen/moodle-atto_styles/blob/master/README.md#usage--settings">"Usage & Settings"</a>.
 <hr />
 For example:<br />
 {$a->code_example}
