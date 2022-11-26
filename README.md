@@ -260,6 +260,12 @@ There, please add the "styles" keyword to one of the lines in the "editor_atto |
 If you are using a default Atto toolbar, we propose to change "style1 = title, bold, italic" to "style1 = title, styles, bold, italic"
 
 
+Capabilities
+------------
+
+This plugin does not add any additional capabilities.
+
+
 Multilanguage filter support
 ---------------------------
 
