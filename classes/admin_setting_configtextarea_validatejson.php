@@ -24,8 +24,6 @@
 
 namespace atto_styles;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Special setting for configtextarea with JSON validation.
  *

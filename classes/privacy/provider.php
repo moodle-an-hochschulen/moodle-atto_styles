@@ -24,8 +24,6 @@
 
 namespace atto_styles\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem implementing null_provider.
  *
