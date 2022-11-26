@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.9-r2
 
 * 2022-11-26 - Add Capabilities section to README.md
 * 2022-11-26 - Updated Moodle Plugin CI to newer upstream recommendations
