@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2022-11-26 - Improvement: Make the plugin's JSON configuration more robust against whitespace issues.
 * 2021-02-05 - Move Moodle Plugin CI from Travis CI to Github actions
 * 2020-10-14 - Changed styles for focusing and hovering of dropdown list items.
 * 2020-10-09 - Prepare compatibility for Moodle 3.9.

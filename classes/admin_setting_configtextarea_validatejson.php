@@ -42,16 +42,23 @@ class admin_setting_configtextarea_validatejson extends \admin_setting_configtex
      * @return mixed bool true for success or string:error on failure.
      */
     public function validate($data) {
+        global $CFG;
+
+        // Require plugin library.
+        require_once($CFG->dirroot.'/lib/editor/atto/plugins/styles/locallib.php');
+
         // If no entry is made validate true, otherwise the setting would always return an error and
         // could not be saved.
         if (empty($data)) {
             return true;
         }
 
-        $jsonobject = json_decode($data);
+        // Try to decode the object.
+        $jsonobject = json_decode(atto_styles_preprocess_json($data));
+
         // If the JSON decoding was not possible (returns null) or encountered errors (returns false)
         // then return an error message.
-        if (!$jsonobject) {
+        if ($jsonobject == null) {
             return get_string('jsondecodemessage', 'atto_styles');
         }
 

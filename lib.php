@@ -33,12 +33,16 @@ defined('MOODLE_INTERNAL') || die();
  * @param stdClass $fpoptions - unused.
  */
 function atto_styles_params_for_js($elementid, $options, $fpoptions) {
+    global $CFG;
+
+    // Require plugin library.
+    require_once($CFG->dirroot.'/lib/editor/atto/plugins/styles/locallib.php');
 
     // Format a string with the active filter set.
     // If it is modified - we assume that some sort of text filter is working in this context.
     $styles = get_config('atto_styles', 'config');
 
-    $styles = json_decode($styles);
+    $styles = json_decode(atto_styles_preprocess_json($styles));
 
     // If there is a single definition, no square brackets are needed for valid JSON.
     // Nevertheless, we need a multidimensional array with the JSON object to proceed.
