@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.9-r1
 
 * 2022-11-26 - Improvement: Make the plugin's JSON configuration more robust against whitespace issues.
 * 2021-02-05 - Move Moodle Plugin CI from Travis CI to Github actions
