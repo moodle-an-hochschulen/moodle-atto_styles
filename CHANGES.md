@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2022-11-26 - Updated Moodle Plugin CI to newer upstream recommendations
 * 2022-11-26 - Add UPGRADE.md as internal upgrade documentation
 * 2022-11-26 - Update maintainers and copyrights in README.md.
 * 2022-11-26 - Change in Moodle release support:
