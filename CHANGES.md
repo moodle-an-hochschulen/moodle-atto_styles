@@ -4,7 +4,7 @@ moodle-atto_styles
 Changes
 -------
 
-### Unreleased
+### v3.10-r1
 
 * 2022-11-26 - Prepare compatibility for Moodle 3.10.
 
