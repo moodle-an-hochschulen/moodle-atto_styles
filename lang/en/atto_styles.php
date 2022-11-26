@@ -77,9 +77,9 @@ For example:<br />
 <br/><br/>
 For more information about bootstrap classes, please visit the following links in the Bootstrap 4 documentation:
 <ul>
-<li><a href="https://getbootstrap.com/docs/4.3/components/badge/">Bootstrap badges</a></li>
-<li><a href="https://getbootstrap.com/docs/4.3/components/alerts/">Bootstrap alerts</a></li>
-<li><a href="https://getbootstrap.com/docs/4.3/utilities/">Bootstrap utilities</a></li>
+<li><a href="https://getbootstrap.com/docs/4.6/components/badge/">Bootstrap badges</a></li>
+<li><a href="https://getbootstrap.com/docs/4.6/components/alerts/">Bootstrap alerts</a></li>
+<li><a href="https://getbootstrap.com/docs/4.6/utilities/">Bootstrap utilities</a></li>
 </ul>
 <hr />
 Please note, that multiple definitions need to be surrounded by square brackets.
