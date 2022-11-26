@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2022-11-26 - Bugfix: Styles might have been applied outside the editor on Firefox, credits to danowar2k.
+
 ### v3.9-r2
 
 * 2022-11-26 - Add Capabilities section to README.md
