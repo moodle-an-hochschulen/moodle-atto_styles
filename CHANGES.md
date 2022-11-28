@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2022-11-28 - Updated Moodle Plugin CI to latest upstream recommendations
+
 ### v3.11-r2
 
 * 2022-11-26 - Bugfix: Styles might have been applied outside the editor on Firefox, credits to danowar2k.
