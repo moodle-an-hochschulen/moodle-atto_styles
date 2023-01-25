@@ -139,10 +139,6 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
                     var displaystyle = pstyle.getPropertyValue('display');
                     if (displaystyle === 'block') {
                         eID = p;
-// SSU_AMEND START - ADD BR AFTER ATTO STYLES DIV
-                        var foo = window.getSelection().focusNode.parentNode;
-                        foo.insertAdjacentHTML('afterend', '<br>');
-// SSU_AMEND END
                         break;
                     }
                 }
