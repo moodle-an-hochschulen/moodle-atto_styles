@@ -44,6 +44,7 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
         styles = JSON.parse(styles);
         var items = [];
         var icon, span, spanpreview, inlinehint;
+        var blocklevel = ['block', 'h3', 'h4', 'h5', 'blockquote'];
         Y.Array.each(styles, function(style) {
             icon = '<i></i>';
             span = '<span>';
@@ -52,9 +53,9 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
             if (style.type === 'nostyle') {
                 icon = '<i class="fa fa-fw fa-times"></i>';
                 span = '<span class="nostyle">';
-            } else if (style.type === 'block') {
+            } else if (blocklevel.indexOf(style.type) != -1) {
                 icon = '<i class="fa fa-fw fa-tint"></i>';
-                span = '<span class="blockstyle">';
+                span = '<span class="blockstyle ' + style.type + '">';
             } else if (style.type == 'inline') {
                 icon = '<i class="fa fa-fw fa-i-cursor"></i>';
                 span = '<span class="inlinestyle">';
@@ -110,6 +111,7 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
      */
     _changeStyle: function(e, style) {
         var eID, element, p, pstyle, styles, host, i;
+        var semanticblocks = ['<block>', '<h3>', '<h4>', '<h5>', '<blockquote>'];
         if (style[0] === '<nostyle>') {
             element = window.getSelection().focusNode;
             if (!this.editor.contains(element)) {
@@ -126,8 +128,9 @@ Y.namespace('M.atto_styles').Button = Y.Base.create('button', Y.M.editor_atto.Ed
                 }
             }
             return;
-        } else if (style[0] === '<block>') {
-            document.execCommand('formatBlock', false, '<div>');
+        } else if (semanticblocks.indexOf(style[0]) != -1) {
+            var formatblock = (style[0] == '<block>') ? '<div>' : style[0];
+            document.execCommand('formatBlock', false, formatblock);
             element = window.getSelection().focusNode;
             if (!this.editor.contains(element)) {
                 return;
