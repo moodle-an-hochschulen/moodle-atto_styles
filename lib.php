@@ -51,9 +51,11 @@ function atto_styles_params_for_js($elementid, $options, $fpoptions) {
         $styles = $new;
     }
 
-    foreach ($styles as $key => $style) {
-        $styles[$key]->title = format_text($styles[$key]->title);
-        $styles[$key]->title = strip_tags($styles[$key]->title);
+    if (count($styles) > 0 && $styles[0] != null) {
+        foreach ($styles as $key => $style) {
+            $styles[$key]->title = format_text($styles[$key]->title);
+            $styles[$key]->title = strip_tags($styles[$key]->title);
+        }
     }
 
     $nostyle = new stdClass();
