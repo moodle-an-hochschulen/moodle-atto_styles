@@ -26,8 +26,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'atto_styles';
-$plugin->version = 2020103002;
-$plugin->release = 'v3.9-r3';
+$plugin->version = 2020103003;
+$plugin->release = 'v3.9-r4';
 $plugin->requires = 2020061500;
 $plugin->supported = [39, 39];
 $plugin->maturity = MATURITY_STABLE;
