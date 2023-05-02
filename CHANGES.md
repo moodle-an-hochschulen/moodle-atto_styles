@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2023-05-02 - Bugfix: Get rid of debug message if no styles are configured
 * 2022-11-28 - Updated Moodle Plugin CI to latest upstream recommendations
 
 ### v3.11-r2
