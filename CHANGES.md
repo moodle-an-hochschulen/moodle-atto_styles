@@ -4,6 +4,10 @@ moodle-atto_styles
 Changes
 -------
 
+### Unreleased
+
+* 2023-10-10 - Updated Moodle Plugin CI to latest upstream recommendations
+
 ### v4.0-r3
 
 * 2023-05-02 - Bugfix: Get rid of debug message if no styles are configured
