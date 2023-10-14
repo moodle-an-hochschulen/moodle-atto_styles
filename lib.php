@@ -46,7 +46,7 @@ function atto_styles_params_for_js($elementid, $options, $fpoptions) {
     // Nevertheless, we need a multidimensional array with the JSON object to proceed.
     // So we create one here for this case.
     if (!is_array($styles)) {
-        $new = array();
+        $new = [];
         $new[] = $styles;
         $styles = $new;
     }
@@ -67,7 +67,7 @@ function atto_styles_params_for_js($elementid, $options, $fpoptions) {
 
     $styles = json_encode($styles);
 
-    return array('styles' => $styles);
+    return ['styles' => $styles];
 }
 
 /**
@@ -75,7 +75,7 @@ function atto_styles_params_for_js($elementid, $options, $fpoptions) {
  */
 function atto_styles_get_fontawesome_icon_map() {
     return [
-        'atto_styles:icon' => 'fa-tint'
+        'atto_styles:icon' => 'fa-tint',
     ];
 }
 
@@ -85,5 +85,5 @@ function atto_styles_get_fontawesome_icon_map() {
 function atto_styles_strings_for_js() {
     global $PAGE;
 
-    $PAGE->requires->strings_for_js(array('inlinehint'), 'atto_styles');
+    $PAGE->requires->strings_for_js(['inlinehint'], 'atto_styles');
 }
