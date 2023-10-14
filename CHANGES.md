@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2023-10-14 - Add automated release to moodle.org/plugins
 * 2023-10-14 - Make codechecker happy again
 * 2023-10-10 - Updated Moodle Plugin CI to latest upstream recommendations
 
