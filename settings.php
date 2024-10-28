@@ -23,6 +23,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+use core\lang_string;
+
 defined('MOODLE_INTERNAL') || die();
 
 $ADMIN->add('editoratto', new admin_category('atto_styles', new lang_string('pluginname', 'atto_styles')));
