@@ -18,6 +18,14 @@ Motivation for this plugin
 The purpose of this Atto plugin is to let users apply custom CSS classes to block and inline text.
 
 
+State of the plugin
+-------------------
+
+This plugin has reached end of life.
+
+Severe bugs would still be fixed as long as Atto and Moodle 4.5 is supported, but minor bugs or feature requests will not be processed anymore and the plugin will not be upgraded to Moodle 5.x as well as Atto is not part of Moodle from 5.x on anymore. Please consider using [tiny_styles from Academic Moodle Cooperation](https://github.com/academic-moodle-cooperation/moodle-tiny_styles) which is the natural successor of this plugin for the Tiny editor.
+
+
 Installation
 ------------
 
